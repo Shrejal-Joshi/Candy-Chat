@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React, { useState, useEffect} from 'react';
 import { useHistory } from 'react-router';
 import {ChatEngine} from 'react-chat-engine';
 import {auth} from '../firebase';
@@ -34,8 +34,8 @@ const Chats = () =>
             history.push('/');
             return;
         }
-        axios.get('https://api.chatengine.io/user/me',{
-            header :{
+        axios.get('https://api.chatengine.io/users/me',{
+            headers :{
                 'project-id' : '445e9cac-6b63-498b-ba65-e63e60d86a7f',
                 'user-name' : user.email,
                 'user-secret' : user.uid,
